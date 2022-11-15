@@ -12,7 +12,7 @@
 import { ref, computed } from 'vue';
 
 const classe = ref([
-  'Aielli',
+  'Aielliz',
   'Bianchi',
   'Calzolari',
   'Caridei',
