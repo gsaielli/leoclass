@@ -1,9 +1,9 @@
 <template>
   <q-page class="column flex-center">
-    <div v-for="item in classe" :key="item">- {{ item }}</div>
+    <div v-for="item in classe" :key="item">{{ item }}</div>
     <div class="row">
-      <q-btn color="primary" label="In ordine" @click="inOrdine" />
-      <q-btn color="primary" label="Mescola" @click="mescola" />
+      <q-btn color="primary" label="Sorted" @click="inOrdine" />
+      <q-btn color="primary" label="Random" @click="mescola" />
     </div>
   </q-page>
 </template>
@@ -12,7 +12,7 @@
 import { ref, computed } from 'vue';
 
 const classe = ref([
-  'Aielliz',
+  'Aielli',
   'Bianchi',
   'Calzolari',
   'Caridei',
