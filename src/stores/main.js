@@ -27,14 +27,13 @@ export const useMainStore = defineStore('main', {
       'Trevisan',
       'Ziruolo',
     ],
+    groups: [],
   }),
-
   getters: {
     doubleCount(state) {
       return state.counter * 2;
     },
   },
-
   actions: {
     increment() {
       this.counter++;
@@ -46,6 +45,13 @@ export const useMainStore = defineStore('main', {
       this.classe.sort(function () {
         return 0.5 - Math.random();
       });
+    },
+    groupBy(chunkSize) {
+      this.groups = [];
+      for (let i = 0; i < this.classe.length; i += chunkSize) {
+        const chunk = this.classe.slice(i, i + chunkSize);
+        this.groups.push(chunk);
+      }
     },
   },
 });
